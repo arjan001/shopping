@@ -85,6 +85,7 @@ $(document).ready(function () {
     $(owlElementID).owlCarousel({
 
         autoPlay: 5000,
+        loops:true,
         stopOnHover: true,
         navigation: true,
         pagination: true,
@@ -187,6 +188,8 @@ $('.homepage-owl-carousel').each(function(){
         itemsDesktop : [1199,2],
         navigation : true,
         pagination : false,
+        autoplay:true,
+        loop:true,
 
         navigationText: ["", ""]
     });
@@ -204,6 +207,8 @@ $(".blog-slider").owlCarousel({
 
 $(".best-seller").owlCarousel({
     items : 3,
+    autoPlay:true,
+    loop:true,
     navigation : true,
     itemsDesktopSmall :[979,2],
     itemsDesktop : [1199,2],
@@ -231,6 +236,8 @@ $(".brand-slider").owlCarousel({
     slideSpeed : 300,
     pagination: false,
     paginationSpeed : 400,
+    loop:true,
+    autoPlay : true,
     navigationText: ["", ""]
 });    
 $("#advertisement").owlCarousel({

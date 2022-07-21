@@ -385,13 +385,7 @@ img[src="assets/images/blank.gif"] {
   height: 20px;
   top: -36px;
   right: 27px;
-  -webkit-transition: all linear 0.2s;
-  -moz-transition: all linear 0.2s;
-  -ms-transition: all linear 0.2s;
-  -o-transition: all linear 0.2s;
   transition: all linear 0.2s;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   background: #dddddd;
 }

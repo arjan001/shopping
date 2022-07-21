@@ -471,7 +471,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 														<div class="rating rateit-small"></div>
 														<div class="product-price">
 															<span class="price">
-																Rs. <?php echo htmlentities($row['productPrice']); ?>
+																Ksh. <?php echo htmlentities($row['productPrice']); ?>
 															</span>
 
 														</div><!-- /.product-price -->
@@ -487,7 +487,9 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 							</div><?php } ?>
 					</div>
 				</section>
+
 				<?php include('includes/brands-slider.php'); ?>
+				
 			</div>
 		</div>
 		<?php include('includes/footer.php'); ?>
