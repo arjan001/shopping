@@ -130,7 +130,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 										<div class="info-box">
 											<div class="row">
 												<div class="col-xs-2">
-													<i class="icon fa fa-truck"></i>
+													<i class="fa-solid fa-truck-clock"></i>
 												</div>
 												<div class="col-xs-10">
 													<h4 class="info-box-heading orange">free shipping</h4>
@@ -489,7 +489,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 				</section>
 
 				<?php include('includes/brands-slider.php'); ?>
-				
+
 			</div>
 		</div>
 		<?php include('includes/footer.php'); ?>
