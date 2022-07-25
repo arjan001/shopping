@@ -10,14 +10,11 @@
                                 <a href="index.php">
 
                                     <h3>Shopping Portal</h3>
-                                    <!-- <li><a href="https://urbanstalls.com/sellerlogin/"><i class="icon fa fa-sign-in"></i>&nbsp Seller Login</a></li> -->
                                     <li><a href=""><i class="icon fa fa-sign-in"></i>&nbsp Admin</a></li>
                                     <li><a href=""></a>about us</li>
                                     <li><a href=""></a>contacts</li>
                                     <li><a href=""></a>return policy</li>
                                     
-                                    <!-- <li><a href="https://urbanstalls.com/admin/courier/"><i class="icon fa fa-sign-in"></i>&nbsp Courier Service Login</a></li> 
-<li><a href="https://urbanstalls.com/sellerdetail.php"><i class="icon fa fa-sign-in"></i>&nbsp Feedback Seller</a></li> -->
                                 </a>
                             </div><!-- /.logo -->
 
