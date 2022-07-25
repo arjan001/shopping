@@ -5,9 +5,9 @@ include('includes/config.php');
 
 if(isset($_POST['change']))
 {
-   $email=$_POST['email'];
-    $contact=$_POST['contact'];
-    $password=md5($_POST['password']);
+$email=$_POST['email'];
+$contact=$_POST['contact'];
+$password=md5($_POST['password']);
 $query=mysqli_query($con,"SELECT * FROM users WHERE email='$email' and contactno='$contact'");
 $num=mysqli_fetch_array($query);
 if($num>0)
@@ -81,7 +81,7 @@ exit();
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/favicon2.ico">
 <script type="text/javascript">
 function valid()
 {
@@ -169,9 +169,11 @@ echo htmlentities($_SESSION['errmsg']="");
 <!-- create a new account -->			</div><!-- /.row -->
 		</div>
 <?php include('includes/brands-slider.php');?>
+
 </div>
 </div>
 <?php include('includes/footer.php');?>
+
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	
 	<script src="assets/js/bootstrap.min.js"></script>

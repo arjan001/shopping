@@ -143,9 +143,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="basicinput">Product Company</label>
+											<label class="control-label" for="basicinput">Publishers</label>
 											<div class="controls">
-												<input type="text" name="productCompany" placeholder="Enter Product Comapny Name" class="span8 tip" required>
+												<input type="text" name="productCompany" placeholder="Enter Product Publishers" class="span8 tip" required>
 											</div>
 										</div>
 										<div class="control-group">

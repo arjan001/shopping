@@ -75,6 +75,8 @@ header('location:my-wishlist.php');
 		
 		<!-- Icons/Glyphs -->
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/images/favicon2.ico">
 
         <!-- Fonts --> 
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>

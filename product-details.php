@@ -49,7 +49,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<meta name="keywords" content="MediaCenter, Template, eCommerce">
+	<meta name="keywords" content="MediaCenter,eCommerce,bookly,bookshop,">
 	<meta name="robots" content="all">
 	<title>Product Details</title>
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -138,8 +138,8 @@
 								</div>
 							</div>
 						</div>
-						<!-- ============================================== CATEGORY : END ============================================== -->
-						<!-- ============================================== HOT DEALS  TRENDING============================================== -->
+						<!-- ============================================== CATEGORY : END ============================================= -->
+						<!-- ======================================== HOT DEALS  TRENDING====================================== -->
 						<div class="sidebar-widget hot-deals wow fadeInUp">
 							<h3 class="section-title">Trending  Titles</h3>
 							<div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-xs">
