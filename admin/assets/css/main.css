@@ -307,7 +307,7 @@ textarea.autosize {
 	padding: 14px 19px;
 }
 .widget {
-	-moz-box-sizing: content-box;
+	box-sizing: content-box;
 	color: #333;
 	margin-bottom: 30px;
 	padding: 10px 12px;
@@ -1114,7 +1114,7 @@ li.dropdown.current-user .dropdown-menu li a {
 	border: none !important;
 }
 
-.pagination.pagination-green li.disabled a, .pagination-green .pagination li.disabled a,{
+.pagination.pagination-green li.disabled a, .pagination-green .pagination li.disabled a{
 color: #AAAAAA !important;
 }
 .pagination.pagination-green li.disabled a:hover, .pagination-green .pagination li.disabled a:hover, .pagination.pagination-green li.disabled a:focus, .pagination-green .pagination li.disabled a:focus {
@@ -3065,7 +3065,7 @@ body.error-full-page {
 /* ---------------------------------------------------------------------- */
 /*	Inline Editor
 /* ---------------------------------------------------------------------- */
-}
+
 #inline-container [contenteditable="true"] {
 	padding: 10px;
 }
@@ -4624,7 +4624,7 @@ body.header-default .daterangepicker {
 [class*=" icon-"]:before {
   text-decoration: inherit;
   display: inline-block;
-  speak: none;
+  
 }
 a [class^="icon-"],
 a [class*=" icon-"] {

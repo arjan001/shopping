@@ -94,7 +94,7 @@ else{
 	    <div class="panel-body">
 	    <form name="payment" method="post">
 	    <input type="radio" name="paymethod" value="COD" checked="checked"> COD
-	     <input type="radio" name="paymethod" value="Internet Banking"> Internet Banking
+	     <input type="radio" name="paymethod" value="mpesa">MPESA
 	     <input type="radio" name="paymethod" value="Debit / Credit card"> Debit / Credit card <br /><br />
 	     <input type="submit" value="submit" name="submit" class="btn btn-primary">
 	    	
@@ -133,24 +133,7 @@ else{
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
-	
-	<script src="switchstylesheet/switchstylesheet.js"></script>
-	
-	<script>
-		$(document).ready(function(){ 
-			$(".changecolor").switchstylesheet( { seperator:"color"} );
-			$('.show-theme-options').click(function(){
-				$(this).parent().toggleClass('open');
-				return false;
-			});
-		});
 
-		$(window).bind("load", function() {
-		   $('.show-theme-options').delay(2000).trigger('click');
-		});
-	</script>
-	<!-- For demo purposes – can be removed on production : End -->
 
 	
 

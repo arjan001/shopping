@@ -23,7 +23,7 @@ if (isset($_Get['action'])) {
 						<h2>
 							<div class="item">
 								<a href="index.php" class="image">
-									<img data-echo="brandsimage/log.png" alt="BOOKLY" src="assets/images/blank.gif" alt="">
+									<img data-echo="brandsimage/two.png" alt="BOOKLY" src="assets/images/blank.gif" width="140px".>
 								</a>
 						</h2>
 
@@ -46,7 +46,8 @@ if (isset($_Get['action'])) {
 			</div><!-- /.top-search-holder -->
 
 			<div class="col-xs-12 col-sm-12 col-md-3 animate-dropdown top-cart-row">
-				<!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
+
+<!-- ============================================ SHOPPING CART DROPDOWN START============================================================= -->
 				<?php
 				if (!empty($_SESSION['cart'])) {
 				?>
@@ -167,7 +168,7 @@ if (isset($_Get['action'])) {
 
 									<div class="clearfix"></div>
 
-									<a href="index.php" class="btn btn-upper btn-primary btn-block m-t-20">Continue Shooping</a>
+									<a href="index.php" class="btn btn-upper btn-primary btn-block m-t-20">Continue Shoping</a>
 								</div><!-- /.cart-total-->
 
 
@@ -179,7 +180,7 @@ if (isset($_Get['action'])) {
 
 
 
-				<!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
+<!-- ============================================ SHOPPING CART DROPDOWN : END============================================================= -->
 			</div><!-- /.top-cart-row -->
 		</div><!-- /.row -->
 

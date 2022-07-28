@@ -117,7 +117,7 @@ return false;
 return true;
 }
 </script>
-    	<script>
+<script>
 function userAvailability() {
 $("#loaderIcon").show();
 jQuery.ajax({
@@ -217,7 +217,7 @@ echo htmlentities($_SESSION['errmsg']="");
 
 <div class="form-group">
 	    	<label class="info-title" for="contactno">Contact No. <span>*</span></label>
-	    	<input type="text" class="form-control unicase-form-control text-input" id="contactno" name="contactno" maxlength="10" required >
+	    	<input type="text" class="form-control unicase-form-control text-input" id="contactno" name="contactno" maxlength="15" required >
 	  	</div>
 
 <div class="form-group">
@@ -242,7 +242,7 @@ echo htmlentities($_SESSION['errmsg']="");
 		Track your orders easily.
 		</label>
 		<label class="checkbox">
- Keep a record of all your purchases made at our bookly store
+        Keep a record of all your purchases made at our bookly store
 		</label>
 	</div>
 </div>	
@@ -268,26 +268,6 @@ echo htmlentities($_SESSION['errmsg']="");
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
-	
-	<script src="switchstylesheet/switchstylesheet.js"></script>
-	
-	<script>
-		$(document).ready(function(){ 
-			$(".changecolor").switchstylesheet( { seperator:"color"} );
-			$('.show-theme-options').click(function(){
-				$(this).parent().toggleClass('open');
-				return false;
-			});
-		});
-
-		$(window).bind("load", function() {
-		   $('.show-theme-options').delay(2000).trigger('click');
-		});
-	</script>
-	<!-- For demo purposes – can be removed on production : End -->
-
-	
 
 </body>
 </html>

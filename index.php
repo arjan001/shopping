@@ -394,7 +394,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 						<!-- ART GRID SECTION ENDS HERE -->
 
-						<!-- EDUCATION GRID SECTION -->
+						<!-- EDUCATION GRID SECTION STARTS HERE-->
 
 						<div class="col-md-6">
 							<section class="section">
@@ -443,6 +443,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 							</section>
 
 						</div>
+						<!-- EDUCATION GRID SECTION END HERE-->
 					</div>
 				</div>
 				<!-- ============================================== TABS : END  HERE============================================== -->
