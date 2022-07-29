@@ -10,10 +10,10 @@
                                 <a href="index.php">
 
                                     <h3>Shopping Portal</h3>
-                                    <li><a href=""><i class="icon fa fa-sign-in"></i>&nbsp Admin</a></li>
-                                    <li><a href=""></a>about us</li>
-                                    <li><a href=""></a>contacts</li>
-                                    <li><a href=""></a>return policy</li>
+                                    <li> <a href="#">coming soon</a></li>
+                                    <li> <a href="#">about us</a> </li>
+                                    <li> <a href="#">contacts</a> </li>
+                                    <li> <a href="#">return policy</a> </li>
                                     
                                 </a>
                             </div><!-- /.logo -->
@@ -129,4 +129,10 @@
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container -->
+
+           <!--========== SCROLL TO TOP BUTTON  ==========-->
+           <a href="#" class="scrollup" id="scroll-up" >
+           <i class="fa fa-angle-up"></i></a>
+           <!--========== SCROLL TO TOP BUTTON ENDS ==========-->
+
     </div><!-- /.links-social -->

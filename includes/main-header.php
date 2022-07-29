@@ -23,7 +23,7 @@ if (isset($_Get['action'])) {
 						<h2>
 							<div class="item">
 								<a href="index.php" class="image">
-									<img data-echo="brandsimage/two.png" alt="BOOKLY" src="assets/images/blank.gif" width="140px".>
+									<img data-echo="brandsimage/two.png" alt="BOOKLY" src="assets/images/blank.gif" width="142px".>
 								</a>
 						</h2>
 
