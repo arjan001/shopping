@@ -3,12 +3,13 @@ session_start();
 error_reporting(0);
 include('includes/config.php');
 // Code user Registration
+// on friday jully 29 of 2022 i secude the signup page with mysqli_real_escape_string
 if(isset($_POST['submit']))
 {
-$name=$_POST['fullname'];
-$email=$_POST['emailid'];
-$contactno=$_POST['contactno'];
-$password=md5($_POST['password']);
+$name= mysqli_real_escape_string($con, $_POST['fullname'] );
+$email= mysqli_real_escape_string  ($con,  $_POST['emailid']);
+$contactno=mysqli_real_escape_string  ($con,  $_POST['contactno']);
+$password=mysqli_real_escape_string  ($con, md5($_POST['password']));
 $query=mysqli_query($con,"insert into users(name,email,contactno,password) values('$name','$email','$contactno','$password')");
 if($query)
 {
