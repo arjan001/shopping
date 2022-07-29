@@ -20,10 +20,12 @@ echo "<script>alert('Not register something went worng');</script>";
 }
 }
 // Code for User login
+// on friday jully 29 of 2022 i secude the signup page with mysqli_real_escape_string after having concerned about the security of the website
 if(isset($_POST['login']))
 {
-   $email=$_POST['email'];
-   $password=md5($_POST['password']);
+
+$email= mysqli_real_escape_string($con,  $_POST['email']);
+$password=mysqli_real_escape_string($con, md5($_POST['password'])) ;
 $query=mysqli_query($con,"SELECT * FROM users WHERE email='$email' and password='$password'");
 $num=mysqli_fetch_array($query);
 if($num>0)
