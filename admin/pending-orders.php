@@ -61,12 +61,12 @@ if (strlen($_SESSION['alogin']) == 0) {
 									<br />
 
 
-									<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display table-responsive">
+									<table cellpadding="0" cellspacing="0" border="0" width="100%" class="datatable-1 table table-bordered table-striped	 display table-responsive">
 										<thead>
 											<tr>
 												<th>#</th>
 												<th> Name</th>
-												<th width="50">Email /Contact no</th>
+												<th width="30">Contacts</th>
 												<th>Shipping Address</th>
 												<th>Product </th>
 												<th>Qty </th>
@@ -94,7 +94,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 													<td><?php echo htmlentities($row['quantity']); ?></td>
 													<td><?php echo htmlentities($row['quantity'] * $row['productprice'] + $row['shippingcharge']); ?></td>
 													<td><?php echo htmlentities($row['orderdate']); ?></td>
-													<td> <a href="updateorder.php?oid=<?php echo htmlentities($row['id']); ?>" title="Update order" target="_blank"><i class="icon-edit"></i></a>
+													<td> <a href="updateorder.php?oid=<?php echo htmlentities($row['id']); ?>" title="Update order" target="_blank"><i class="icon-edit" color="green"></i></a>
 													</td>
 												</tr>
 

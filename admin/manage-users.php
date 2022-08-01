@@ -43,6 +43,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 								<div class="module-head">
 									<h3>Manage Users</h3>
 								</div>
+
 								<div class="module-body table">
 									<?php if (isset($_GET['del'])) { ?>
 										<div class="alert alert-error">
@@ -57,10 +58,10 @@ if (strlen($_SESSION['alogin']) == 0) {
 									<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 										<thead>
 											<tr>
-												<th>#</th>
-												<th> Name</th>
+												<th>0</th>
+												<th>Name</th>
 												<th>Email </th>
-												<th>Contact no</th>
+												<th>Contact</th>
 												<th>Shippping</th>
 												<th>Billing</th>
 												<th>Reg. Date </th>

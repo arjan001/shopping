@@ -6,13 +6,13 @@
 				</a>
 
 			  	<a class="brand" href="index.html">
-			  		BOOKLY ADMIN LOGIN
+			  		BOOKLY ADMIN PAGE
 			  	</a>
 
 				<div class="nav-collapse collapse navbar-inverse-collapse">
 					<ul class="nav pull-right">
 						<li><a href="#">
-							Edwin
+							EDWIN
 						</a></li>
 						<li class="nav-user dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">

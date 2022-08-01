@@ -65,7 +65,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 											<tr>
 												<th>#</th>
 												<th> Name</th>
-												<th width="50">Email /Contact no</th>
+												<th width="50">Contact</th>
 												<th>Shipping Address</th>
 												<th>Product </th>
 												<th>Qty </th>

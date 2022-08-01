@@ -3,7 +3,7 @@ session_start();
 error_reporting(0);
 include('includes/config.php');
 // Code user Registration
-// on friday jully 29 of 2022 i secude the signup page with mysqli_real_escape_string
+// on friday jully 29 of 2022 i secured the signup page with mysqli_real_escape_string after having concerns about sql injection
 if(isset($_POST['submit']))
 {
 $name= mysqli_real_escape_string($con, $_POST['fullname'] );
@@ -20,7 +20,7 @@ echo "<script>alert('Not register something went worng');</script>";
 }
 }
 // Code for User login
-// on friday jully 29 of 2022 i secude the signup page with mysqli_real_escape_string after having concerned about the security of the website
+// on friday jully 29 of 2022 i secured the signup page with mysqli_real_escape_string after having concerned about the security of the website
 if(isset($_POST['login']))
 {
 
@@ -175,7 +175,7 @@ error:function (){}
 				<!-- Sign-in -->			
 <div class="col-md-6 col-sm-6 sign-in">
 	<h4 class="">sign in</h4>
-	<p class="">Hello, Welcome to your booly account.</p>
+	<p class="">Hello, Welcome to your bookly account.</p>
 	<form class="register-form outer-top-xs" method="post">
 	<span style="color:red;" >
 <?php

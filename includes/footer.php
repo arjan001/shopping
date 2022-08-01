@@ -7,28 +7,32 @@
                     <div class="contact-info">
                         <div class="footer-logo">
                             <div class="logo">
-                                <a href="index.php">
+                                
 
-                                    <h3>Shopping Portal</h3>
-                                    <li> <a href="#">coming soon</a></li>
-                                    <li> <a href="#">about us</a> </li>
-                                    <li> <a href="#">contacts</a> </li>
-                                    <li> <a href="#">return policy</a> </li>
+                            <div class="module-heading">
+                            <h4 class="module-title">quick-links</h4>
+                            </div><!-- /.module-heading -->
+                                    <li> <a href="#">Coming soon</a></li>
+                                    <li> <a href="about.php">About us</a> </li>
+                                    <li> <a href="contact.php" target= "_blank">Contact us</a> </li>
+                                    <li> <a href="#">Return Policy</a> </li>
+                                    <li> <a href="faq.php">Faq</a> </li>
                                     
-                                </a>
+                                    
+                                
                             </div><!-- /.logo -->
 
                         </div><!-- /.footer-logo -->
 
                         <div class="module-body m-t-20">
-                            <p class="about-us"> Brought To You By <a href="">edwin</a></p>
+                            <p class="about-us"> Brought To You By <a href="" data-toggle="tooltip" data-placement="right" title="EDWIN">....</a></p>
                             <div class="social-icons">
 
-                                <a href="https://stackoverflow.com/users/19531531/nyongesa-edwin" target="_blank"><i class="icon fa fa-stack-overflow"></i></a>
-                                <a href="localhost/shopping/" class='active'><i class="icon fa fa-facebook"></i></a>
-                                <a href="https://github.com/arjan001" target="_blank" class='active'><i class="icon fa fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/edwin-nyongesa-770658230/" target="_blank"><i class="icon fa fa-linkedin"></i></a>
-                                <a href="https://www.instagram.com/BILGAX007" class='active' target="_blank"><i class="icon fa fa-instagram"></i></a>
+                                <a href="https://stackoverflow.com/users/19531531/nyongesa-edwin"  data-toggle="tooltip" data-placement="top" title="stackoverflow" target="_blank"><i class="icon fa fa-stack-overflow"></i></a>
+                                <a href="localhost/shopping/" class='active'><i class="icon fa fa-facebook"  data-toggle="tooltip" data-placement="top" title="facebook"></i></a>
+                                <a href="https://github.com/arjan001"   data-toggle="tooltip" data-placement="top" title="github"target="_blank" class='active'><i class="icon fa fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/edwin-nyongesa-770658230/"   data-toggle="tooltip" data-placement="top" title="linkedin"target="_blank"><i class="icon fa fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/BILGAX007"   data-toggle="tooltip" data-placement="top" title="instagram"class='active' target="_blank"><i class="icon fa fa-instagram"></i></a>
 
                             </div><!-- /.social-icons -->
                         </div><!-- /.module-body -->
@@ -131,7 +135,7 @@
         </div><!-- /.container -->
 
            <!--========== SCROLL TO TOP BUTTON  ==========-->
-           <a href="#" class="scrollup" id="scroll-up" >
+           <a href="#" class="scrollup" id="scroll-up"  data-toggle="tooltip" data-placement="left" title="back to top">
            <i class="fa fa-angle-up"></i></a>
            <!--========== SCROLL TO TOP BUTTON ENDS ==========-->
 

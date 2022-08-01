@@ -129,14 +129,14 @@ while($row=mysqli_fetch_array($sql))
 <!-- ================================== TOP NAVIGATION : END ================================== -->	            <div class="sidebar-module-container">
 	            	<h3 class="section-title">shop by</h3>
 	            	<div class="sidebar-filter">
-		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
+<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
 <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
 	<div class="widget-header m-t-20">
 		<h4 class="widget-title">Category</h4>
 	</div>
 	<div class="sidebar-widget-body m-t-10">
-	         <?php $sql=mysqli_query($con,"select id,categoryName  from category");
-while($row=mysqli_fetch_array($sql))
+	<?php $sql=mysqli_query($con,"select id,categoryName  from category");
+     while($row=mysqli_fetch_array($sql))
 {
     ?>
 		<div class="accordion">
@@ -161,7 +161,7 @@ while($row=mysqli_fetch_array($sql))
 	            </div><!-- /.sidebar-module-container -->
             </div><!-- /.sidebar -->
 			<div class='col-md-9'>
-					<!-- ========================================== SECTION – HERO ========================================= -->
+<!-- ========================================== SECTION – HERO ========================================= -->
 
 	<div id="category" class="category-carousel hidden-xs">
 		<div class="item">	
@@ -185,14 +185,14 @@ while($row=mysqli_fetch_array($sql))
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane active " id="grid-container">
 							<div class="category-product  inner-top-vs">
-								<div class="row">									
-			<?php
-$ret=mysqli_query($con,"select * from products where productName like '$find'");
-$num=mysqli_num_rows($ret);
-if($num>0)
-{
-while ($row=mysqli_fetch_array($ret)) 
-{?>							
+								<div class="row">
+
+	<?php $ret=mysqli_query($con,"select * from products where productName or productcompany like '$find'");
+    $num=mysqli_num_rows($ret);
+    if($num>0)
+    {
+    while ($row=mysqli_fetch_array($ret)) 
+    {?>							
 		<div class="col-sm-6 col-md-4 wow fadeInUp">
 			<div class="products">				
 	<div class="product">		
@@ -209,14 +209,13 @@ while ($row=mysqli_fetch_array($ret))
 			<div class="description"></div>
 
 			<div class="product-price">	
-				<span class="price">
-					Ksh. <?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Ksh.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+				<span class="price">Ksh. <?php echo htmlentities($row['productPrice']);?></span>
+				<span class="price-before-discount">Ksh.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
 			</div><!-- /.product-price -->
 			
 		</div><!-- /.product-info -->
-					<div class="cart clearfix animate-effect">
+				<div class="cart clearfix animate-effect">
 				<div class="action">
 					<ul class="list-unstyled">
 						<li class="add-cart-button btn-group">

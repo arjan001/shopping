@@ -24,7 +24,7 @@
 				header('location:login.php');
 			} else {
 				mysqli_query($con, "insert into wishlist(userId,productId) values('" . $_SESSION['id'] . "','$pid')");
-				echo "<script>alert('Product aaded in wishlist');</script>";
+				echo "<script>alert('Product aaded in wishlist succeffully');</script>";
 				header('location:my-wishlist.php');
 			}
 		}
@@ -32,9 +32,9 @@
 			$qty = $_POST['quality'];
 			$price = $_POST['price'];
 			$value = $_POST['value'];
-			$name = $_POST['name'];
-			$summary = $_POST['summary'];
-			$review = $_POST['review'];
+			$name =mysqli_real_escape_string($con,$_POST['name']);
+			$summary =mysqli_real_escape_string($con, $_POST['summary']) ;
+			$review =mysqli_real_escape_string($con,$_POST['review']);
 			mysqli_query($con, "insert into productreviews(productId,quality,price,value,name,summary,review) values('$pid','$qty','$price','$value','$name','$summary','$review')");
 		}
 
@@ -145,7 +145,7 @@
 							<div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-xs">
 
 								<?php
-								$ret = mysqli_query($con, "select * from products order by rand() limit 4 ");
+								$ret = mysqli_query($con, "select * from products order by rand() limit 8 ");
 								while ($rws = mysqli_fetch_array($ret)) {
 
 								?>
@@ -155,7 +155,7 @@
 										<div class="products">
 											<div class="hot-deal-wrapper">
 												<div class="image">
-													<img src="admin/productimages/ <?php echo htmlentities($rws['productName']); ?>/<?php echo htmlentities($rws['productImage1']); ?>" width="200" height="334" alt="">
+												<img src="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" data-echo="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" width="180" height="250" alt="">
 												</div>
 
 											</div><!-- /.hot-deal-wrapper -->
@@ -182,7 +182,7 @@
 														<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
 															<i class="fa fa-shopping-cart"></i>
 														</button>
-														<a href="product-details.php?page=product&action=add&id=<?php echo $rws['id']; ?>" class="lnk btn btn-primary">Add to cart</a>
+														<div class="action"><a href="product-details.php?page=product&action=add&id=<?php echo $rws['id']; ?>" class="lnk btn btn-primary">Add to cart</a></div>
 
 
 													</div>
@@ -243,7 +243,7 @@
 
 									</div><!-- /.single-product-slider -->
 
-                                        <!-- PRODUCT THUMBNAILS -->
+                                        <!-- PRODUCT THUMBNAILS START HERE-->
 									<div class="single-product-gallery-thumbs gallery-thumbs">
 
 										<div id="owl-single-product-thumbnails">
@@ -273,6 +273,7 @@
 
 
 									</div>
+									<!-- PRODUCT THUMBNAILS END HERE-->
 
 								</div>
 							</div>
@@ -405,7 +406,7 @@
 											</div>
 
 											<div class="col-sm-7">
-												<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
+												<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="cart item"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
 											</div>
 
 
@@ -416,11 +417,11 @@
 										<span class="social-label">Share :</span>
 										<div class="social-icons">
 											<ul class="list-inline">
-												<li><a class="fa fa-facebook" href="http://facebook.com/transvelo"></a></li>
-												<li><a class="fa fa-twitter" href="#"></a></li>
-												<li><a class="fa fa-linkedin" href="#"></a></li>
-												<li><a class="fa fa-rss" href="#"></a></li>
-												<li><a class="fa fa-pinterest" href="#"></a></li>
+												<li><a class="fa fa-facebook" href="#"  data-toggle="tooltip" data-placement="bottom" title="facebook"></a></li>
+												<li><a class="fa fa-twitter" href="#"  data-toggle="tooltip" data-placement="bottom" title="twitter"></a></li>
+												<li><a class="fa fa-linkedin" href="#"  data-toggle="tooltip" data-placement="bottom" title="linkedin"></a></li>
+												<li><a class="fa fa-rss" href="#"  data-toggle="tooltip" data-placement="bottom" title="rss"></a></li>
+												<li><a class="fa fa-pinterest" href="#"  data-toggle="tooltip" data-placement="bottom" title="pinterest"></a></li>
 											</ul><!-- /.social-icons -->
 										</div>
 									</div>
@@ -432,7 +433,7 @@
 							</div><!-- /.col-sm-7 -->
 						</div><!-- /.row -->
 
-
+                 <!-- :::::::::::::::::::::::::::::::REVIEWS AND PAGE SINGLE PRODUCT DESCRIPTION AREA:::::::::::::::::::::::::::::::::; -->
 						<div class="product-tabs inner-bottom-xs  wow fadeInUp">
 							<div class="row">
 								<div class="col-sm-3">
@@ -451,16 +452,16 @@
 											</div>
 										</div><!-- /.tab-pane -->
 
-										<div id="review" class="tab-pane">
+										<div id="review" class="tab-pane" >
 											<div class="product-tab">
 
-												<div class="product-reviews">
+												<div class="product-reviews" >
 													<h4 class="title">Customer Reviews</h4>
 													<?php $qry = mysqli_query($con, "select * from productreviews where productId='$pid'");
 													while ($rvw = mysqli_fetch_array($qry)) {
 													?>
 
-														<div class="reviews" style="border: solid 1px #000; padding-left: 2% ">
+														<div class="reviews" style="border: solid .8px #000; padding-left: 2% ">
 															<div class="review">
 																<div class="review-title"><span class="summary"><?php echo htmlentities($rvw['summary']); ?></span><span class="date"><i class="fa fa-calendar"></i><span><?php echo htmlentities($rvw['reviewDate']); ?></span></span></div>
 
@@ -477,12 +478,12 @@
 												</div><!-- /.product-reviews -->
 												<form role="form" class="cnt-form" name="review" method="post">
 
-
+                                                
 													<div class="product-add-review">
 														<h4 class="title">Write your own review</h4>
 														<div class="review-table">
 															<div class="table-responsive">
-																<table class="table table-bordered">
+																<table class="table table-striped table-bordered" hidden>
 																	<thead>
 																		<tr>
 																			<th class="cell-label">&nbsp;</th>
@@ -493,7 +494,7 @@
 																			<th>5 stars</th>
 																		</tr>
 																	</thead>
-																	<tbody>
+																	<tbody >
 																		
 																		<tr>
 																			<td class="cell-label">Quality</td>

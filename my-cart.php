@@ -253,13 +253,12 @@ $_SESSION['pid']=$pdtid;
 				<tr>
 					<td>
 						<div class="form-group">
-						<?php $qry=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");
-while ($rt=mysqli_fetch_array($qry)) {
-	echo htmlentities($rt['shippingAddress'])."<br />";
-	echo htmlentities($rt['shippingCity'])."<br />";
-	echo htmlentities($rt['shippingState']);
-	echo htmlentities($rt['shippingPincode']);
-}
+						<?php $qry=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");while ($rt=mysqli_fetch_array($qry)) {
+	                    echo htmlentities($rt['shippingAddress'])."<br />";
+	                    echo htmlentities($rt['shippingCity'])."<br />";
+	                    echo htmlentities($rt['shippingState']);
+	                    echo htmlentities($rt['shippingPincode']);
+                       }
 
 						?>
 		
@@ -284,12 +283,11 @@ while ($rt=mysqli_fetch_array($qry)) {
 				<tr>
 					<td>
 						<div class="form-group">
-						<?php $qry=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");
-while ($rt=mysqli_fetch_array($qry)) {
-	echo htmlentities($rt['billingAddress'])."<br />";
-	echo htmlentities($rt['billingCity'])."<br />";
-	echo htmlentities($rt['billingState']);
-	echo htmlentities($rt['billingPincode']);
+						<?php $qry=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");while ($rt=mysqli_fetch_array($qry)) {
+	                    echo htmlentities($rt['billingAddress'])."<br />";
+	                    echo htmlentities($rt['billingCity'])."<br />";
+	                    echo htmlentities($rt['billingState']);
+	                    echo htmlentities($rt['billingPincode']);
 }
 
 						?>
@@ -317,7 +315,7 @@ while ($rt=mysqli_fetch_array($qry)) {
 				<tr>
 					<td>
 						<div class="cart-checkout-btn pull-right">
-							<button type="submit" name="ordersubmit" class="btn btn-primary">PROCCED TO CHEKOUT</button>
+							<button type="submit" name="ordersubmit" class="btn btn-primary">PROCCED TO CHECKOUT</button>
 						
 						</div>
 					</td>

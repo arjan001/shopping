@@ -41,6 +41,8 @@ exit();
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
 	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="../assets/images/favicon2.ico">
 </head>
 <body>
 
@@ -113,10 +115,10 @@ exit();
 	<div class="footer">
 		<div class="container">
 			 
-
-			<b class="copyright">&copy; 2017 Shopping Portal </b> All rights reserved.
+		<b class="copyright">&copy; copyright @BOOKLY <?php echo date('D-M-Y'); ?> All rights reserved :: Edwin Nyongesa</b>
 		</div>
 	</div>
+
 	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
 	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

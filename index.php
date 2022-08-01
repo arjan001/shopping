@@ -78,6 +78,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 	</header>
 
 	<!-- ============================================== HEADER : END ============================================== -->
+
 	<div class="body-content outer-top-xs" id="top-banner-and-menu">
 		<div class="container">
 			<div class="furniture-container homepage-container">
@@ -90,8 +91,9 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 					</div><!-- /.sidemenu-holder -->
 
 					<div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder">
-						<!-- ========================================== SECTION – HERO ========================================= -->
 
+						<!-- ======================================= SECTION – HERO ========================================= -->
+                        <!-- MAIN HOMEPAGE SLIDER  ON LANDING PAGE STARTS HERE -->
 						<div id="hero" class="homepage-slider3">
 							<div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
 								<div class="full-width-slider">
@@ -106,8 +108,9 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 								</div><!-- /.full-width-slider -->
 							</div><!-- /.owl-carousel -->
 						</div>
-
+						<!-- MAIN HOMEPAGE SLIDER  ON LANDING PAGE ENDS HERE -->
 						<!-- ========================================= SECTION – HERO : END ========================================= -->
+
 						<!-- ============================================== INFO BOXES ============================================== -->
 						<div class="info-boxes wow fadeInUp">
 							<div class="info-boxes-inner">
@@ -374,8 +377,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 														<div class="description"></div>
 
 														<div class="product-price">
-															<span class="price">
-																Ksh.<?php echo htmlentities($row['productPrice']); ?> </span>
+															<span class="price">Ksh.<?php echo htmlentities($row['productPrice']); ?> </span>
 															<span class="price-before-discount">Ksh.<?php echo htmlentities($row['productPriceBeforeDiscount']); ?></span>
 
 														</div>
@@ -443,6 +445,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 							</section>
 
 						</div>
+						
 						<!-- EDUCATION GRID SECTION END HERE-->
 					</div>
 				</div>
@@ -481,11 +484,10 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 														<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
 														<div class="rating rateit-small"></div>
 														<div class="product-price">
-															<span class="price">
-																Ksh. <?php echo htmlentities($row['productPrice']); ?>
-															</span>
+															<span class="price">Ksh. <?php echo htmlentities($row['productPrice']); ?></span><br>
+															<span class="price-before-discount">Ksh.<?php echo htmlentities($row['productPriceBeforeDiscount']); ?></span>
 
-														</div><!-- /.product-price -->
+														</div><!-- /.product-price --><br>
 														<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add To Cart</a></div>
 													</div>
 												</div><!-- /.col -->
@@ -499,6 +501,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 					</div>
 				</section>
 				<!-- HISTORY ENDS HERE-->
+
 
 				<?php include('includes/brands-slider.php'); ?>
 

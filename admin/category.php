@@ -13,9 +13,9 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 if(isset($_POST['submit']))
 {
-	$category=$_POST['category'];
-	$description=$_POST['description'];
-$sql=mysqli_query($con,"insert into category(categoryName,categoryDescription) values('$category','$description')");
+$category=$_POST['category'];
+$description=$_POST['description'];
+$sql=mysqli_query($con ,"insert into category(categoryName,categoryDescription) values('$category','$description')");
 $_SESSION['msg']="Category Created !!";
 
 }

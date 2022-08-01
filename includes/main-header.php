@@ -47,7 +47,7 @@ if (isset($_Get['action'])) {
 
 			<div class="col-xs-12 col-sm-12 col-md-3 animate-dropdown top-cart-row">
 
-<!-- ============================================ SHOPPING CART DROPDOWN START============================================================= -->
+            <!-- ============================================ SHOPPING CART DROPDOWN START============================================================= -->
 				<?php
 				if (!empty($_SESSION['cart'])) {
 				?>

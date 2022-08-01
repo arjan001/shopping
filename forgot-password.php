@@ -5,9 +5,12 @@ include('includes/config.php');
 
 if(isset($_POST['change']))
 {
-$email=$_POST['email'];
-$contact=$_POST['contact'];
-$password=md5($_POST['password']);
+// did an sql injection prevention measure on the forgot password input fields 
+// ill also try and do prepared statements here. since its more secure that way
+
+$email= mysqli_real_escape_string ($con, $_POST['email']);
+$contact= mysqli_real_escape_string($con ,$_POST['contact']);
+$password= mysqli_real_escape_string ($con, md5($_POST['password']));
 $query=mysqli_query($con,"SELECT * FROM users WHERE email='$email' and contactno='$contact'");
 $num=mysqli_fetch_array($query);
 if($num>0)
