@@ -97,8 +97,8 @@ header('location:my-wishlist.php');
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
-				<li class='active'>Wishlish</li>
+				<li><a href="/shopping">Home</a></li>
+				<li class='active'>Wishlist</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -130,10 +130,9 @@ while ($row=mysqli_fetch_array($ret)) {
 					<td class="col-md-2"><img src="admin/productimages/<?php echo htmlentities($row['pid']);?>/<?php echo htmlentities($row['pimage']);?>" alt="<?php echo htmlentities($row['pname']);?>" width="60" height="100"></td>
 					<td class="col-md-6">
 						<div class="product-name"><a href="product-details.php?pid=<?php echo htmlentities($pd=$row['pid']);?>"><?php echo htmlentities($row['pname']);?></a></div>
-<?php $rt=mysqli_query($con,"select * from productreviews where productId='$pd'");
-$num=mysqli_num_rows($rt);
-{
-?>
+                     <?php $rt=mysqli_query($con,"select * from productreviews where productId='$pd'");
+                     $num=mysqli_num_rows($rt);
+                     {?>
 
 						<div class="rating">
 							<i class="fa fa-star rate"></i>
@@ -144,16 +143,16 @@ $num=mysqli_num_rows($rt);
 							<span class="review">( <?php echo htmlentities($num);?> Reviews )</span>
 						</div>
 						<?php } ?>
-						<div class="price">Rs. 
-							<?php echo htmlentities($row['pprice']);?>.00
-							<span>$900.00</span>
-						</div>
+
+						<div class="price">Ksh. <?php echo htmlentities($row['pprice']);?>.00</div>
+						
+
 					</td>
 					<td class="col-md-2">
 						<a href="my-wishlist.php?page=product&action=add&id=<?php echo $row['pid']; ?>" class="btn-upper btn btn-primary">Add to cart</a>
 					</td>
 					<td class="col-md-2 close-btn">
-						<a href="my-wishlist.php?del=<?php echo htmlentities($row['wid']);?>" onClick="return confirm('Are you sure you want to delete?')" class=""><i class="fa fa-times"></i></a>
+						<a href="my-wishlist.php?del=<?php echo htmlentities($row['wid']);?>" onClick="return confirm('Are you sure you want to delete?')" class=""><i class="fa fa-times" data-toggle="tooltip" data-placement="right" title="delete item"></i></a>
 					</td>
 				</tr>
 				<?php } } else{ ?>
@@ -165,13 +164,14 @@ $num=mysqli_num_rows($rt);
 			</tbody>
 		</table>
 	</div>
-</div>			</div><!-- /.row -->
+ </div>			</div><!-- /.row -->
 		</div><!-- /.sigin-in-->
 	<?php include('includes/brands-slider.php');?>
-</div>
-</div>
-<?php include('includes/footer.php');?>
-
+ </div>
+ </div>
+ <?php include('includes/footer.php');?>
+    <!-- SCRIPTS BEGIN -->
+	
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	
 	<script src="assets/js/bootstrap.min.js"></script>
@@ -187,24 +187,8 @@ $num=mysqli_num_rows($rt);
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-
-	<!-- For demo purposes – can be removed on production -->
-	
-	<script src="switchstylesheet/switchstylesheet.js"></script>
-	
-	<script>
-		$(document).ready(function(){ 
-			$(".changecolor").switchstylesheet( { seperator:"color"} );
-			$('.show-theme-options').click(function(){
-				$(this).parent().toggleClass('open');
-				return false;
-			});
-		});
-
-		$(window).bind("load", function() {
-		   $('.show-theme-options').delay(2000).trigger('click');
-		});
-	</script>
+     
+	<!-- SCRIPTS END-->
 </body>
 </html>
 <?php } ?>

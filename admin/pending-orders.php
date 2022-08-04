@@ -67,11 +67,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>#</th>
 												<th> Name</th>
 												<th width="30">Contacts</th>
-												<th>Shipping Address</th>
+												<th>Address</th>
 												<th>Product </th>
 												<th>Qty </th>
 												<th>Amount </th>
-												<th>Order Date</th>
+												<th>orderDate</th>
 												<th>Action</th>
 
 
@@ -88,13 +88,13 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<tr>
 													<td><?php echo htmlentities($cnt); ?></td>
 													<td><?php echo htmlentities($row['username']); ?></td>
-													<td><?php echo htmlentities($row['useremail']); ?>/<?php echo htmlentities($row['usercontact']); ?></td>
+													<td><?php echo htmlentities($row['useremail']); ?>/<br><?php echo htmlentities($row['usercontact']); ?></td>
 													<td><?php echo htmlentities($row['shippingaddress'] . "," . $row['shippingcity'] . "," . $row['shippingstate'] . "-" . $row['shippingpincode']); ?></td>
 													<td><?php echo htmlentities($row['productname']); ?></td>
 													<td><?php echo htmlentities($row['quantity']); ?></td>
 													<td><?php echo htmlentities($row['quantity'] * $row['productprice'] + $row['shippingcharge']); ?></td>
 													<td><?php echo htmlentities($row['orderdate']); ?></td>
-													<td> <a href="updateorder.php?oid=<?php echo htmlentities($row['id']); ?>" title="Update order" target="_blank"><i class="icon-edit" color="green"></i></a>
+													<td> <a href="updateorder.php?oid=<?php echo htmlentities($row['id']); ?>" disabled title="Update order" target="_blank"><i class="icon-edit" color="green"></i></a>
 													</td>
 												</tr>
 

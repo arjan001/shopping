@@ -39,19 +39,19 @@ include('includes/config.php');
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
-		<link rel="shortcut icon" href="assets/images/favicon2ico">
+		<link rel="shortcut icon" href="assets/images/favicon2.ico">
 	<script language="javascript" type="text/javascript">
-var popUpWin=0;
-function popUpWindow(URLStr, left, top, width, height)
-{
- if(popUpWin)
-{
-if(!popUpWin.closed) popUpWin.close();
-}
-popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width='+600+',height='+600+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
+        var popUpWin=0;
+        function popUpWindow(URLStr, left, top, width, height)
+        {
+         if(popUpWin)
+        {
+        if(!popUpWin.closed) popUpWin.close();
+        }
+        popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width='+600+',height='+600+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
 }
 
-</script>
+   </script>
 
 	</head>
     <body class="cnt-home">
@@ -116,8 +116,8 @@ while($row=mysqli_fetch_array($query))
 				<tr>
 					<td><?php echo $cnt;?></td>
 					<td class="cart-image">
-						<a class="entry-thumbnail" href="detail.html">
-						    <img src="admin/productimages/<?php echo $row['pname'];?>/<?php echo $row['pimg1'];?>" alt="" width="84" height="146">
+					<a class="entry-thumbnail" href="detail.html">
+						    <img src="admin/productimages/<?php echo $row['proid'];?>/<?php echo $row['pimg1'];?>" alt="" width="84" height="146">
 						</a>
 					</td>
 					<td class="cart-product-name-info">
@@ -152,9 +152,11 @@ while($row=mysqli_fetch_array($query))
 		</form>
 		<!-- ============================================== BRANDS CAROUSEL ============================================== -->
 <?php echo include('includes/brands-slider.php');?>
-<!-- ============================================== BRANDS CAROUSEL : END ============================================== -->	</div><!-- /.container -->
+<!-- ============================================== BRANDS CAROUSEL : END ============================================== -->
+</div><!-- /.container -->
 </div><!-- /.body-content -->
 <?php include('includes/footer.php');?>
+    <!-- SCRIPTS BEGIN -->
 
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	
@@ -171,24 +173,7 @@ while($row=mysqli_fetch_array($query))
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
+    <!-- SCRIPTS END--> 
 
-	<!-- For demo purposes – can be removed on production -->
-	
-	<script src="switchstylesheet/switchstylesheet.js"></script>
-	
-	<script>
-		$(document).ready(function(){ 
-			$(".changecolor").switchstylesheet( { seperator:"color"} );
-			$('.show-theme-options').click(function(){
-				$(this).parent().toggleClass('open');
-				return false;
-			});
-		});
-
-		$(window).bind("load", function() {
-		   $('.show-theme-options').delay(2000).trigger('click');
-		});
-	</script>
-	<!-- For demo purposes – can be removed on production : End -->
 </body>
 </html>

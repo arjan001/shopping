@@ -62,25 +62,25 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form action="index.html" autocomplete="off">
+          <form action="" autocomplete="off" onsubmit="sendEmail();reset(); return false">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
-              <input type="text" name="name" class="input" />
+              <input type="text" name="name" class="input"  id ="name"/>
               <label for="">Username</label>
               <span>Username</span>
             </div>
             <div class="input-container">
-              <input type="email" name="email" class="input" />
+              <input type="email" name="email" class="input"  id ="email"/>
               <label for="">Email</label>
               <span>Email</span>
             </div>
             <div class="input-container">
-              <input type="tel" name="phone" class="input" />
+              <input type="tel" name="phone" class="input" id ="phone" />
               <label for="">Phone</label>
               <span>Phone</span>
             </div>
             <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
+              <textarea name="message" class="input"  id="message"></textarea>
               <label for="">Message</label>
               <span>Message</span>
             </div>
@@ -91,5 +91,6 @@
     </div>
 
     <script src="assets/js/contact.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>

@@ -67,7 +67,7 @@ while($row=mysqli_fetch_array($ret))
 else{
    ?>
    <tr>
-   <td colspan="2">Order Not Process Yet</td>
+   <td colspan="2">Hey <?php echo htmlentities($_SESSION['username']); ?> please be patient as we try to process your order</td>
    </tr>
    <?php  }
 $st='Delivered';

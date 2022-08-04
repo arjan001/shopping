@@ -187,7 +187,7 @@ while($row=mysqli_fetch_array($sql))
 							<div class="category-product  inner-top-vs">
 								<div class="row">
 
-	<?php $ret=mysqli_query($con,"select * from products where productName or productcompany like '$find'");
+	<?php $ret=mysqli_query($con,"select * from products where productName or productCompany like '$find'");
     $num=mysqli_num_rows($ret);
     if($num>0)
     {
@@ -272,6 +272,8 @@ while($row=mysqli_fetch_array($sql))
 </div>
 </div>
 <?php include('includes/footer.php');?>
+    <!-- SCRIPTS BEGIN -->
+
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	
 	<script src="assets/js/bootstrap.min.js"></script>
@@ -287,25 +289,8 @@ while($row=mysqli_fetch_array($sql))
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
+    <!-- SCRIPTS END HERE -->
 
-	<!-- For demo purposes – can be removed on production -->
-	
-	<script src="switchstylesheet/switchstylesheet.js"></script>
-	
-	<script>
-		$(document).ready(function(){ 
-			$(".changecolor").switchstylesheet( { seperator:"color"} );
-			$('.show-theme-options').click(function(){
-				$(this).parent().toggleClass('open');
-				return false;
-			});
-		});
-
-		$(window).bind("load", function() {
-		   $('.show-theme-options').delay(2000).trigger('click');
-		});
-	</script>
-	<!-- For demo purposes – can be removed on production : End -->
 
 	
 

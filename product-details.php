@@ -182,10 +182,9 @@
 														<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
 															<i class="fa fa-shopping-cart"></i>
 														</button>
-														<div class="action"><a href="product-details.php?page=product&action=add&id=<?php echo $rws['id']; ?>" class="lnk btn btn-primary">Add to cart</a></div>
-
-
 													</div>
+													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+													
 
 												</div><!-- /.action -->
 											</div><!-- /.cart -->
@@ -197,14 +196,11 @@
 							</div><!-- /.sidebar-widget -->
 						</div>
 
-						<!-- ============================================== COLOR: END ============================================== -->
+						<!-- ==============================================HOT DEALS TRENDING END HERE ============================================== -->
 					</div>
 				</div><!-- /.sidebar -->
-				<?php
-				$ret = mysqli_query($con, "select * from products where id='$pid'");
-				while ($row = mysqli_fetch_array($ret)) {
-
-				?>
+				<?php $ret = mysqli_query($con, "select * from products where id='$pid'");
+				      while ($row = mysqli_fetch_array($ret)) { ?>
 
 
 					<div class='col-md-9'>
@@ -239,7 +235,7 @@
 											<a data-lightbox="image-1" data-title="Gallery" href="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage3']); ?>">
 												<img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage3']); ?>" width="370" height="350" />
 											</a>
-										</div>
+										</div><!-- /.single-product-gallery-item -->
 
 									</div><!-- /.single-product-slider -->
 
@@ -321,7 +317,7 @@
 										<div class="row">
 											<div class="col-sm-3">
 												<div class="stock-box">
-													<span class="label">Product Brand :</span>
+													<span class="label">Publisher:</span>
 												</div>
 											</div>
 											<div class="col-sm-9">
@@ -647,6 +643,7 @@
 	</div>
 	</div>
 	<?php include('includes/footer.php'); ?>
+    <!-- SCRIPTS BEGIN -->
 
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 
@@ -663,27 +660,8 @@
 	<script src="assets/js/bootstrap-select.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
+    <!-- SCRIPTS END HERE -->
 
-	<!-- For demo purposes – can be removed on production -->
-
-	<script src="switchstylesheet/switchstylesheet.js"></script>
-
-	<script>
-		$(document).ready(function() {
-			$(".changecolor").switchstylesheet({
-				seperator: "color"
-			});
-			$('.show-theme-options').click(function() {
-				$(this).parent().toggleClass('open');
-				return false;
-			});
-		});
-
-		$(window).bind("load", function() {
-			$('.show-theme-options').delay(2000).trigger('click');
-		});
-	</script>
-	<!-- For demo purposes – can be removed on production : End -->
 
 
 

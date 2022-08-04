@@ -64,7 +64,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>Contact</th>
 												<th>Shippping</th>
 												<th>Billing</th>
-												<th>Reg. Date </th>
+												<th>Reg.Date </th>
 
 											</tr>
 										</thead>

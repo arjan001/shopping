@@ -83,9 +83,10 @@ $(document).ready(function () {
     }
 
     $(owlElementID).owlCarousel({
-
-        autoPlay: 5000,
-        loops:true,
+        
+        loop:true,
+        autoplayTimeout:1000,
+        autoPlay:true,
         stopOnHover: true,
         navigation: true,
         pagination: true,
@@ -232,7 +233,7 @@ $(".sidebar-carousel").owlCarousel({
 
 $(".brand-slider").owlCarousel({
     items : 6,
-    navigation : true,
+    navigation : false,
     slideSpeed : 300,
     pagination: false,
     paginationSpeed : 400,
@@ -431,3 +432,18 @@ function scrollUp() {
  window.addEventListener('scroll', scrollUp)
  
  // SCROLL TO TOP ENDS HERE
+
+//  SMTP JS MAIL SERVICESES
+ function sendEmail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "arjannky@gmail.com",
+        Password : "FA743FBA39DE2B2B28D286FE90486C957B16",
+        To : 'arjannky@gmail.com',
+        From : document.getelementById('email').value,
+        Subject : "This is a new BOOKLY form enquiry",
+        Body : document.getelementById('message').value,
+    }).then(
+      message => alert(message)
+    );
+ }

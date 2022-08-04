@@ -19,7 +19,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 		}
 	}
 }
-// COde for Wishlist
+// code yangu ya Wishlist
 if(isset($_GET['pid']) && $_GET['action']=="wishlist" ){
 	if(strlen($_SESSION['login'])==0)
     {   
@@ -80,13 +80,7 @@ header('location:my-wishlist.php');
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
-
-		<!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
+		<link rel="shortcut icon" href="assets/images/favicon2.ico">
 
 	</head>
     <body class="cnt-home">
@@ -109,8 +103,9 @@ header('location:my-wishlist.php');
 		<div class='row outer-bottom-sm'>
 			<div class='col-md-3 sidebar'>
 	            <!-- ================================== TOP NAVIGATION ================================== -->
-<!-- ================================== TOP NAVIGATION : END ================================== -->	            <div class="sidebar-module-container">
-	            	<h3 class="section-title">shop by</h3>
+<!-- ================================== TOP NAVIGATION : END ================================== -->	
+            <div class="sidebar-module-container">
+	            	<h3 class="section-title">Shop by</h3>
 	            	<div class="sidebar-filter">
 		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
 <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
@@ -144,7 +139,7 @@ while($row=mysqli_fetch_array($sql))
 	            </div><!-- /.sidebar-module-container -->
             </div><!-- /.sidebar -->
 			<div class='col-md-9'>
-					<!-- ========================================== SECTION – HERO ========================================= -->
+<!-- ========================================== SECTION – HERO ========================================= -->
 
 	<div id="category" class="category-carousel hidden-xs">
 		<div class="item">	
@@ -158,9 +153,8 @@ while($row=mysqli_fetch_array($sql))
 					</div>
 
 					       <?php $sql=mysqli_query($con,"select subcategory  from subcategory where id='$cid'");
-while($row=mysqli_fetch_array($sql))
-{
-    ?>
+                           while($row=mysqli_fetch_array($sql))
+                             {?>
 
 					<div class="excerpt hidden-sm hidden-md">
 						<?php echo htmlentities($row['subcategory']);?>
@@ -200,9 +194,9 @@ while ($row=mysqli_fetch_array($ret))
 			<div class="description"></div>
 
 			<div class="product-price">	
-				<span class="price">
-					Rs. <?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs. <?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+
+				<span class="price">Ksh. <?php echo htmlentities($row['productPrice']);?></span>
+				<span class="price-before-discount">Ksh. <?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
 			</div><!-- /.product-price -->
 			
@@ -212,7 +206,7 @@ while ($row=mysqli_fetch_array($ret))
 					<ul class="list-unstyled">
 						<li class="add-cart-button btn-group">
 							<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-								<i class="fa fa-shopping-cart"></i>													
+							<i class="fa fa-shopping-cart"></i>													
 							</button>
 							<a href="category.php?page=product&action=add&id=<?php echo $row['id']; ?>">
 							<button class="btn btn-primary" type="button">Add to cart</button></a>
@@ -234,7 +228,7 @@ while ($row=mysqli_fetch_array($ret))
 		</div>
 	  <?php } } else {?>
 	
-		<div class="col-sm-6 col-md-4 wow fadeInUp"> <h3>No Product Found</h3>
+		<div class="col-sm-6 col-md-4 wow fadeInUp"> <h3>No Product Found try again later</h3>
 		</div>
 		
 <?php } ?>	
@@ -264,6 +258,8 @@ while ($row=mysqli_fetch_array($ret))
 </div>
 </div>
 <?php include('includes/footer.php');?>
+    <!-- SCRIPTS BEGIN -->
+	
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	
 	<script src="assets/js/bootstrap.min.js"></script>
@@ -279,27 +275,6 @@ while ($row=mysqli_fetch_array($ret))
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-
-	<!-- For demo purposes – can be removed on production -->
-	
-	<script src="switchstylesheet/switchstylesheet.js"></script>
-	
-	<script>
-		$(document).ready(function(){ 
-			$(".changecolor").switchstylesheet( { seperator:"color"} );
-			$('.show-theme-options').click(function(){
-				$(this).parent().toggleClass('open');
-				return false;
-			});
-		});
-
-		$(window).bind("load", function() {
-		   $('.show-theme-options').delay(2000).trigger('click');
-		});
-	</script>
-	<!-- For demo purposes – can be removed on production : End -->
-
-	
-
+    <!-- SCRIPTS END HERE -->
 </body>
 </html>

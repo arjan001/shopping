@@ -66,7 +66,7 @@ include('includes/config.php');
 			<div class="row">
 				<div class="col-md-12">
 	<h2>Track your Order</h2>
-	<span class="title-tag inner-top-vs">Please enter your Order ID in the box below and press Enter. This was given to you on your receipt and in the confirmation email you should have received. </span>
+	<span class="title-tag inner-top-vs" style="color:blue;">Please enter your Order ID in the box below and press Enter.<br> This was given to you on your receipt and in the confirmation email you should have received <br> or within your order history. </span>
 	<form class="register-form outer-top-xs" role="form" method="post" action="order-details.php">
 		<div class="form-group">
 		    <label class="info-title" for="exampleOrderId1">Order ID</label>
@@ -87,6 +87,8 @@ include('includes/config.php');
 </div>
 </div>
 <?php include('includes/footer.php');?>
+    <!-- SCRIPTS BEGIN -->
+	
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	
 	<script src="assets/js/bootstrap.min.js"></script>
@@ -102,7 +104,7 @@ include('includes/config.php');
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-
+    <!-- SCRIPTS END HERE -->
 	<!-- For demo purposes – can be removed on production -->
 	
 	<script src="switchstylesheet/switchstylesheet.js"></script>

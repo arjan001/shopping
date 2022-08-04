@@ -75,6 +75,7 @@ if (strlen($_SESSION['login']) == 0) {
 		
 		<!-- FAVAICON -->
 		<link rel="shortcut icon" href="assets/images/favicon2.ico">
+		<!-- CHANGE PASSWORD CODE SNIPPET-->
 		<script type="text/javascript">
 			function valid() {
 				if (document.chngpwd.cpass.value == "") {
@@ -234,6 +235,8 @@ if (strlen($_SESSION['login']) == 0) {
 			</div>
 		</div>
 		<?php include('includes/footer.php'); ?>
+		<!-- SCRIPTS BEGIN -->
+
 		<script src="assets/js/jquery-1.11.1.min.js"></script>
 
 		<script src="assets/js/bootstrap.min.js"></script>
@@ -249,26 +252,7 @@ if (strlen($_SESSION['login']) == 0) {
 		<script src="assets/js/bootstrap-select.min.js"></script>
 		<script src="assets/js/wow.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
-
-		<!-- For demo purposes – can be removed on production -->
-
-		<script src="switchstylesheet/switchstylesheet.js"></script>
-
-		<script>
-			$(document).ready(function() {
-				$(".changecolor").switchstylesheet({
-					seperator: "color"
-				});
-				$('.show-theme-options').click(function() {
-					$(this).parent().toggleClass('open');
-					return false;
-				});
-			});
-
-			$(window).bind("load", function() {
-				$('.show-theme-options').delay(2000).trigger('click');
-			});
-		</script>
+        <!-- SCRIPTS END -->
 	</body>
 
 	</html>

@@ -231,8 +231,6 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 						<!--ALL  BOOKS  TOGGLE  END HERE -->
 
-
-
 						<!-- COMICS BOOKS TOGGLE -->
 						<div class="tab-pane" id="comics">
 							<div class="product-slider">
@@ -383,7 +381,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 														</div>
 
 													</div>
-													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary" style="background-color:#6a9b7e;">Add to Cart</a></div>
 												</div>
 											</div>
 										</div>
@@ -433,7 +431,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 														</div>
 
 													</div>
-													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary" style="background-color:#d1c028";>Add to Cart</a></div>
 												</div>
 											</div>
 										</div>
@@ -508,7 +506,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 			</div>
 		</div>
 		<?php include('includes/footer.php'); ?>
-
+       <!--SCRIPTS BEGIN-->
 		<script src="assets/js/jquery-1.11.1.min.js"></script>
 
 		<script src="assets/js/bootstrap.min.js"></script>
@@ -524,7 +522,8 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 		<script src="assets/js/bootstrap-select.min.js"></script>
 		<script src="assets/js/wow.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
-
+        <!--SCRIPTS END-->
+		
 		<!-- For demo purposes – can be removed on production -->
 
 		<script src="switchstylesheet/switchstylesheet.js"></script>

@@ -332,6 +332,7 @@ echo "Your shopping Cart is empty";
 </div>
 </div>
 <?php include('includes/footer.php');?>
+    <!-- SCRIPTS BEGIN -->
 
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	
@@ -348,6 +349,6 @@ echo "Your shopping Cart is empty";
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-
+    <!-- SCRIPTS END -->
 </body>
 </html>

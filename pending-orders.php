@@ -172,6 +172,8 @@ while($row=mysqli_fetch_array($query))
 <!-- ============================================== BRANDS CAROUSEL : END ============================================== -->	</div><!-- /.container -->
 </div><!-- /.body-content -->
 <?php include('includes/footer.php');?>
+    
+    <!-- SCRIPTS BEGIN -->
 
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	
@@ -188,25 +190,9 @@ while($row=mysqli_fetch_array($query))
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-
-	<!-- For demo purposes – can be removed on production -->
+     <!-- SCRIPTS END -->
 	
-	<script src="switchstylesheet/switchstylesheet.js"></script>
 	
-	<script>
-		$(document).ready(function(){ 
-			$(".changecolor").switchstylesheet( { seperator:"color"} );
-			$('.show-theme-options').click(function(){
-				$(this).parent().toggleClass('open');
-				return false;
-			});
-		});
-
-		$(window).bind("load", function() {
-		   $('.show-theme-options').delay(2000).trigger('click');
-		});
-	</script>
-	<!-- For demo purposes – can be removed on production : End -->
 </body>
 </html>
 <?php } ?>

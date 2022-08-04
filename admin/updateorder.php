@@ -33,8 +33,8 @@ if (strlen($_SESSION['alogin']) == 0) {
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>Update Compliant</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="anuj.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon2.ico">
   </head>
