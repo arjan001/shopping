@@ -73,7 +73,7 @@ exit();
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>BOOKLY | Signi-in | Signup</title>
+	    <title>BOOKLY | Signi-in | Sign-up</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">

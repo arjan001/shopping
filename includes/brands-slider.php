@@ -16,7 +16,7 @@
 
 				<div class="item">
 					<a href="#" class="image">
-						<img data-echo="brandsimage/blackberry.jpg" src="assets/images/blank.gif" alt="">
+						<img data-echo="brandsimage/faber.jpg" src="assets/images/blank.gif" alt="">
 					</a>	
 				</div><!--/.item-->
 
@@ -28,13 +28,13 @@
 
 				<div class="item">
 					<a href="#" class="image">
-						<img data-echo="brandsimage/compas.jpg" src="assets/images/blank.gif" alt="">
+						<img data-echo="brandsimage/ifb.jpg" src="assets/images/blank.gif" alt="">
 					</a>	
 				</div>
 
 				<div class="item">
 					<a href="#" class="image">
-						<img data-echo="brandsimage/daikin.jpg" src="assets/images/blank.gif" alt="">
+						<img data-echo="brandsimage/nokia.jpg" src="assets/images/blank.gif" alt="">
 					</a>	
 				</div>
 
@@ -64,7 +64,7 @@
 
 				<div class="item">
 					<a href="#" class="image">
-						<img data-echo="brandsimage/voltas.jpg" src="assets/images/blank.gif" alt="">
+						<img data-echo="brandsimage/fujifilm.jpg" src="assets/images/blank.gif" alt="">
 					</a>	
 				</div>
 

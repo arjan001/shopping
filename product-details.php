@@ -179,11 +179,14 @@
 												<div class="action">
 
 													<div class="add-cart-button btn-group">
+													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
 														<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
+															
 															<i class="fa fa-shopping-cart"></i>
+															
 														</button>
 													</div>
-													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+													
 													
 
 												</div><!-- /.action -->

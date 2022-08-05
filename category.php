@@ -256,15 +256,7 @@ while($row=mysqli_fetch_array($sql))
 		</div>
 		
 <?php } ?>	
-		
-	
-		
-		
-	
-		
-	
-		
-	
+
 		
 										</div><!-- /.row -->
 							</div><!-- /.category-product -->

@@ -181,18 +181,18 @@ while($row=mysqli_fetch_array($sql))
 		</div>
 </div>
 
-				<div class="search-result-container">
-					<div id="myTabContent" class="tab-content">
-						<div class="tab-pane active " id="grid-container">
-							<div class="category-product  inner-top-vs">
-								<div class="row">
+ <div class="search-result-container">
+ 	<div id="myTabContent" class="tab-content">
+ 		<div class="tab-pane active " id="grid-container">
+ 			<div class="category-product  inner-top-vs">
+ 				<div class="row">
 
-	<?php $ret=mysqli_query($con,"select * from products where productName or productCompany like '$find'");
-    $num=mysqli_num_rows($ret);
-    if($num>0)
-    {
-    while ($row=mysqli_fetch_array($ret)) 
-    {?>							
+	               <?php $ret=mysqli_query($con,"select * from products where productName like '$find' or productCompany like '$find'");
+                   $num=mysqli_num_rows($ret);
+                   if($num>0)
+                   {
+                   while ($row=mysqli_fetch_array($ret)) 
+                   {?>							
 		<div class="col-sm-6 col-md-4 wow fadeInUp">
 			<div class="products">				
 	<div class="product">		

@@ -66,7 +66,9 @@ include('includes/config.php');
 			<div class="row">
 				<div class="col-md-12">
 	<h2>Track your Order</h2>
-	<span class="title-tag inner-top-vs" style="color:blue;">Please enter your Order ID in the box below and press Enter.<br> This was given to you on your receipt and in the confirmation email you should have received <br> or within your order history. </span>
+	<span class="title-tag inner-top-vs" style="color:blue;font-weight:bold;">Please enter your Order ID in the box below and press Enter.<br>
+	 This was either given to you on your receipt and in the confirmation email you should have received 
+	 <br> or within your order history. </span>
 	<form class="register-form outer-top-xs" role="form" method="post" action="order-details.php">
 		<div class="form-group">
 		    <label class="info-title" for="exampleOrderId1">Order ID</label>
