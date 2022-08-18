@@ -1,45 +1,45 @@
 <?php
-		session_start();
-		error_reporting(0);
-		include('includes/config.php');
-		if (isset($_GET['action']) && $_GET['action'] == "add") {
-			$id = intval($_GET['id']);
-			if (isset($_SESSION['cart'][$id])) {
-				$_SESSION['cart'][$id]['quantity']++;
-			} else {
-				$sql_p = "SELECT * FROM products WHERE id={$id}";
-				$query_p = mysqli_query($con, $sql_p);
-				if (mysqli_num_rows($query_p) != 0) {
-					$row_p = mysqli_fetch_array($query_p);
-					$_SESSION['cart'][$row_p['id']] = array("quantity" => 1, "price" => $row_p['productPrice']);
-					header('location:my-cart.php');
-				} else {
-					$message = "Product ID is invalid";
-				}
-			}
+session_start();
+error_reporting(0);
+include('includes/config.php');
+if (isset($_GET['action']) && $_GET['action'] == "add") {
+	$id = intval($_GET['id']);
+	if (isset($_SESSION['cart'][$id])) {
+		$_SESSION['cart'][$id]['quantity']++;
+	} else {
+		$sql_p = "SELECT * FROM products WHERE id={$id}";
+		$query_p = mysqli_query($con, $sql_p);
+		if (mysqli_num_rows($query_p) != 0) {
+			$row_p = mysqli_fetch_array($query_p);
+			$_SESSION['cart'][$row_p['id']] = array("quantity" => 1, "price" => $row_p['productPrice']);
+			header('location:my-cart.php');
+		} else {
+			$message = "Product ID is invalid";
 		}
-		$pid = intval($_GET['pid']);
-		if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
-			if (strlen($_SESSION['login']) == 0) {
-				header('location:login.php');
-			} else {
-				mysqli_query($con, "insert into wishlist(userId,productId) values('" . $_SESSION['id'] . "','$pid')");
-				echo "<script>alert('Product aaded in wishlist succeffully');</script>";
-				header('location:my-wishlist.php');
-			}
-		}
-		if (isset($_POST['submit'])) {
-			$qty = $_POST['quality'];
-			$price = $_POST['price'];
-			$value = $_POST['value'];
-			$name =mysqli_real_escape_string($con,$_POST['name']);
-			$summary =mysqli_real_escape_string($con, $_POST['summary']) ;
-			$review =mysqli_real_escape_string($con,$_POST['review']);
-			mysqli_query($con, "insert into productreviews(productId,quality,price,value,name,summary,review) values('$pid','$qty','$price','$value','$name','$summary','$review')");
-		}
+	}
+}
+$pid = intval($_GET['pid']);
+if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
+	if (strlen($_SESSION['login']) == 0) {
+		header('location:login.php');
+	} else {
+		mysqli_query($con, "insert into wishlist(userId,productId) values('" . $_SESSION['id'] . "','$pid')");
+		echo "<script>alert('Product aaded in wishlist succeffully');</script>";
+		header('location:my-wishlist.php');
+	}
+}
+if (isset($_POST['submit'])) {
+	$qty = $_POST['quality'];
+	$price = $_POST['price'];
+	$value = $_POST['value'];
+	$name = mysqli_real_escape_string($con, $_POST['name']);
+	$summary = mysqli_real_escape_string($con, $_POST['summary']);
+	$review = mysqli_real_escape_string($con, $_POST['review']);
+	mysqli_query($con, "insert into productreviews(productId,quality,price,value,name,summary,review) values('$pid','$qty','$price','$value','$name','$summary','$review')");
+}
 
 
-		?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -141,22 +141,22 @@
 						<!-- ============================================== CATEGORY : END ============================================= -->
 						<!-- ======================================== HOT DEALS  TRENDING====================================== -->
 						<div class="sidebar-widget hot-deals wow fadeInUp">
-							<h3 class="section-title">Trending  Titles</h3>
+							<h3 class="section-title">Trending Titles</h3>
 							<div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-xs">
 
-								<?php
-								$ret = mysqli_query($con, "select * from products order by rand() limit 8 ");
-								while ($rws = mysqli_fetch_array($ret)) {
+								<?php $ret = mysqli_query($con, "select * from products order by rand() limit 4 ");
+								while ($rws = mysqli_fetch_array($ret)) { ?>
 
-								?>
+
 
 
 									<div class="item">
 										<div class="products">
 											<div class="hot-deal-wrapper">
 												<div class="image">
-												<img src="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" data-echo="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" width="180" height="250" alt="">
+													<img src="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" data-echo="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" width="180" height="250" alt="">
 												</div>
+
 
 											</div><!-- /.hot-deal-wrapper -->
 
@@ -165,11 +165,8 @@
 												<div class="rating rateit-small"></div>
 
 												<div class="product-price">
-													<span class="price">
-														Ksh.<?php echo htmlentities($rws['productPrice']); ?>
-													</span>
-
-													<span class="price-before-discount">Ksh.<?php echo htmlentities($row['productPriceBeforeDiscount']); ?></span>
+													<span class="price">Ksh.<?php echo htmlentities($rws['productPrice']); ?> </span>
+													<span class="price-before-discount">Ksh.<?php echo htmlentities($rw['productPriceBeforeDiscount']); ?> </span>
 
 												</div><!-- /.product-price -->
 
@@ -179,15 +176,15 @@
 												<div class="action">
 
 													<div class="add-cart-button btn-group">
-													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+														<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
 														<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-															
+
 															<i class="fa fa-shopping-cart"></i>
-															
+
 														</button>
 													</div>
-													
-													
+
+
 
 												</div><!-- /.action -->
 											</div><!-- /.cart -->
@@ -203,7 +200,7 @@
 					</div>
 				</div><!-- /.sidebar -->
 				<?php $ret = mysqli_query($con, "select * from products where id='$pid'");
-				      while ($row = mysqli_fetch_array($ret)) { ?>
+				while ($row = mysqli_fetch_array($ret)) { ?>
 
 
 					<div class='col-md-9'>
@@ -242,7 +239,7 @@
 
 									</div><!-- /.single-product-slider -->
 
-                                        <!-- PRODUCT THUMBNAILS START HERE-->
+									<!-- PRODUCT THUMBNAILS START HERE-->
 									<div class="single-product-gallery-thumbs gallery-thumbs">
 
 										<div id="owl-single-product-thumbnails">
@@ -405,7 +402,7 @@
 											</div>
 
 											<div class="col-sm-7">
-												<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="cart item"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
+												<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
 											</div>
 
 
@@ -416,11 +413,11 @@
 										<span class="social-label">Share :</span>
 										<div class="social-icons">
 											<ul class="list-inline">
-												<li><a class="fa fa-facebook" href="#"  data-toggle="tooltip" data-placement="bottom" title="facebook"></a></li>
-												<li><a class="fa fa-twitter" href="#"  data-toggle="tooltip" data-placement="bottom" title="twitter"></a></li>
-												<li><a class="fa fa-linkedin" href="#"  data-toggle="tooltip" data-placement="bottom" title="linkedin"></a></li>
-												<li><a class="fa fa-rss" href="#"  data-toggle="tooltip" data-placement="bottom" title="rss"></a></li>
-												<li><a class="fa fa-pinterest" href="#"  data-toggle="tooltip" data-placement="bottom" title="pinterest"></a></li>
+												<li><a class="fa fa-facebook" href="#" data-toggle="tooltip" data-placement="bottom" title="facebook"></a></li>
+												<li><a class="fa fa-twitter" href="#" data-toggle="tooltip" data-placement="bottom" title="twitter"></a></li>
+												<li><a class="fa fa-linkedin" href="#" data-toggle="tooltip" data-placement="bottom" title="linkedin"></a></li>
+												<li><a class="fa fa-rss" href="#" data-toggle="tooltip" data-placement="bottom" title="rss"></a></li>
+												<li><a class="fa fa-pinterest" href="#" data-toggle="tooltip" data-placement="bottom" title="pinterest"></a></li>
 											</ul><!-- /.social-icons -->
 										</div>
 									</div>
@@ -432,7 +429,7 @@
 							</div><!-- /.col-sm-7 -->
 						</div><!-- /.row -->
 
-                 <!-- :::::::::::::::::::::::::::::::REVIEWS AND PAGE SINGLE PRODUCT DESCRIPTION AREA:::::::::::::::::::::::::::::::::; -->
+						<!-- :::::::::::::::::::::::::::::::REVIEWS AND PAGE SINGLE PRODUCT DESCRIPTION AREA:::::::::::::::::::::::::::::::::; -->
 						<div class="product-tabs inner-bottom-xs  wow fadeInUp">
 							<div class="row">
 								<div class="col-sm-3">
@@ -451,10 +448,10 @@
 											</div>
 										</div><!-- /.tab-pane -->
 
-										<div id="review" class="tab-pane" >
+										<div id="review" class="tab-pane">
 											<div class="product-tab">
 
-												<div class="product-reviews" >
+												<div class="product-reviews">
 													<h4 class="title">Customer Reviews</h4>
 													<?php $qry = mysqli_query($con, "select * from productreviews where productId='$pid'");
 													while ($rvw = mysqli_fetch_array($qry)) {
@@ -477,14 +474,14 @@
 												</div><!-- /.product-reviews -->
 												<form role="form" class="cnt-form" name="review" method="post">
 
-                                                
+
 													<div class="product-add-review">
 														<h4 class="title">Write your own review</h4>
 														<div class="review-table">
 															<div class="table-responsive">
-																<table class="table table-striped table-bordered" hidden>
+																<table class="table table-striped table-bordered">
 																	<thead>
-																		<tr>
+																		<tr style="background-color:gold">
 																			<th class="cell-label">&nbsp;</th>
 																			<th>1 star</th>
 																			<th>2 stars</th>
@@ -493,8 +490,8 @@
 																			<th>5 stars</th>
 																		</tr>
 																	</thead>
-																	<tbody >
-																		
+																	<tbody>
+
 																		<tr>
 																			<td class="cell-label">Quality</td>
 																			<td><input type="radio" name="quality" class="radio" value="1"></td>
@@ -519,7 +516,7 @@
 																			<td><input type="radio" name="value" class="radio" value="4"></td>
 																			<td><input type="radio" name="value" class="radio" value="5"></td>
 																		</tr>
-																		
+
 																	</tbody>
 																</table><!-- /.table .table-bordered -->
 															</div><!-- /.table-responsive -->
@@ -646,7 +643,7 @@
 	</div>
 	</div>
 	<?php include('includes/footer.php'); ?>
-    <!-- SCRIPTS BEGIN -->
+	<!-- SCRIPTS BEGIN -->
 
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 
@@ -663,7 +660,7 @@
 	<script src="assets/js/bootstrap-select.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-    <!-- SCRIPTS END HERE -->
+	<!-- SCRIPTS END HERE -->
 
 
 

@@ -7,19 +7,19 @@
                     <div class="contact-info">
                         <div class="footer-logo">
                             <div class="logo">
-                                
 
-                            <div class="module-heading">
-                            <h4 class="module-title">quick-links</h4>
-                            </div><!-- /.module-heading -->
-                                    <li> <a href="#">Coming soon</a></li>
-                                    <li> <a href="about.php">About us</a> </li>
-                                    <li> <a href="contact.php" target= "_blank">Contact us</a> </li>
-                                    <li> <a href="#">Return Policy</a> </li>
-                                    <li> <a href="faq.php">Faq</a> </li>
-                                    
-                                    
-                                
+
+                                <div class="module-heading">
+                                    <h4 class="module-title">quick-links</h4>
+                                </div><!-- /.module-heading -->
+                                <li> <a href="#">Coming soon</a></li>
+                                <li> <a href="about.php">About us</a> </li>
+                                <li> <a href="contact.php" target="_blank">Contact us</a> </li>
+                                <li> <a href="#">Return Policy</a> </li>
+                                <li> <a href="faq.php">Faq</a> </li>
+
+
+
                             </div><!-- /.logo -->
 
                         </div><!-- /.footer-logo -->
@@ -28,11 +28,11 @@
                             <p class="about-us"> Brought To You By <a href="" data-toggle="tooltip" data-placement="right" title="EDWIN">....</a></p>
                             <div class="social-icons">
 
-                                <a href="https://stackoverflow.com/users/19531531/nyongesa-edwin"  data-toggle="tooltip" data-placement="top" title="stackoverflow" target="_blank"><i class="icon fa fa-stack-overflow"></i></a>
-                                <a href="localhost/shopping/" class='active'><i class="icon fa fa-facebook"  data-toggle="tooltip" data-placement="top" title="facebook"></i></a>
-                                <a href="https://github.com/arjan001"   data-toggle="tooltip" data-placement="top" title="github"target="_blank" class='active'><i class="icon fa fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/edwin-nyongesa-770658230/"   data-toggle="tooltip" data-placement="top" title="linkedin"target="_blank"><i class="icon fa fa-linkedin"></i></a>
-                                <a href="https://www.instagram.com/BILGAX007"   data-toggle="tooltip" data-placement="top" title="instagram"class='active' target="_blank"><i class="icon fa fa-instagram"></i></a>
+                                <a href="https://stackoverflow.com/users/19531531/nyongesa-edwin" data-toggle="tooltip" data-placement="left" title="stackoverflow" target="_blank"><i class="icon fa fa-stack-overflow"></i></a>
+                                <a href="localhost/shopping/" class='active'><i class="icon fa fa-facebook" data-toggle="tooltip" data-placement="top" title="facebook"></i></a>
+                                <a href="https://github.com/arjan001" data-toggle="tooltip" data-placement="top" title="github" target="_blank" class='active'><i class="icon fa fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/edwin-nyongesa-770658230/" data-toggle="tooltip" data-placement="top" title="linkedin" target="_blank"><i class="icon fa fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/BILGAX007" data-toggle="tooltip" data-placement="right" title="instagram" class='active' target="_blank"><i class="icon fa fa-instagram"></i></a>
 
                             </div><!-- /.social-icons -->
                         </div><!-- /.module-body -->
@@ -118,10 +118,10 @@
                                         </span>
                                     </div>
                                     <div class="media-body">
-                                        <span><a href="https://urbanstalls.com/">bookly.com</a></span>
+                                        <span><a href="#">bookly.com</a></span>
                                     </div>
                                     <div class="media-body">
-                                        <span><b class="copyright">&copy; copyright @ <?php echo date('Y'); ?> All rights reserved:Edwin Nyongesa</b></span>
+                                        <span><b class="copyright">&copy; copyright @ <?php echo date('D M Y'); ?> All rights reserved:Edwin Nyongesa</b></span>
 
                                     </div>
                                 </li>
@@ -134,9 +134,10 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
 
-           <!--========== SCROLL TO TOP BUTTON  ==========-->
-           <a href="#" class="scrollup" id="scroll-up"  data-toggle="tooltip" data-placement="left" title="back to top">
-           <i class="fa fa-angle-up"></i></a>
-           <!--========== SCROLL TO TOP BUTTON ENDS ==========-->
+        <!--========== SCROLL TO TOP BUTTON  ==========-->
+        <a href="#" class="scrollup" id="scroll-up" data-toggle="tooltip" data-placement="left" title="back to top">
+            <i class="fa fa-angle-up"></i></a>
+        <!--========== SCROLL TO TOP BUTTON ENDS ==========-->
+
 
     </div><!-- /.links-social -->

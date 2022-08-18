@@ -1,4 +1,3 @@
-
 //----Include-Function----
 function include(url){ 
 	"use strict";
@@ -701,7 +700,7 @@ $(document).ready(function(){
 	
 	
 	
-	/* Wuick View */
+	/* quick View */
 	function quickViewModal(el){
 		
 		$('body').append('<div id="quick-view-modal"><div id="quick-view-content"><div id="quick-view-close"></div><div class="quick-view-content"><div class="quick-view-container col-lg-12 col-md-12 col-sm-12"></div></div></div></div>');
@@ -785,9 +784,9 @@ $(document).ready(function(){
 				$('#quick-view-modal #product-carousel').flexslider({
 					animation: "slide",
 					controlNav: false,
-					animationLoop: false,
+					animationLoop: true,
 					directionNav: false,
-					slideshow: false,
+					slideshow: true,
 					itemWidth: 80,
 					itemMargin: 0,
 					start: function(slider){

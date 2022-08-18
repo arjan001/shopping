@@ -2,36 +2,33 @@
 session_start();
 error_reporting(0);
 include("include/config.php");
-if(isset($_POST['submit']))
-{
-$username=mysqli_real_escape_string ($con, $_POST['username']);
-$password= mysqli_real_escape_string ($con, md5($_POST['password']));
-$ret=mysqli_query($con,"SELECT * FROM admin WHERE username='$username' and password='$password'");
-$num=mysqli_fetch_array($ret);
-if($num>0)
-{
-$extra="change-password.php";//
-$_SESSION['alogin']=$_POST['username'];
-$_SESSION['id']=$num['id'];
-$host=$_SERVER['HTTP_HOST'];
-$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");
-exit();
-}
-else
-{
-$_SESSION['errmsg']="Invalid username or password";
-$extra="index.php";
-$host  = $_SERVER['HTTP_HOST'];
-$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");
-exit();
-}
+if (isset($_POST['submit'])) {
+	$username = mysqli_real_escape_string($con, $_POST['username']);
+	$password = mysqli_real_escape_string($con, md5($_POST['password']));
+	$ret = mysqli_query($con, "SELECT * FROM admin WHERE username='$username' and password='$password'");
+	$num = mysqli_fetch_array($ret);
+	if ($num > 0) {
+		$extra = "change-password.php"; //
+		$_SESSION['alogin'] = $_POST['username'];
+		$_SESSION['id'] = $num['id'];
+		$host = $_SERVER['HTTP_HOST'];
+		$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+		header("location:http://$host$uri/$extra");
+		exit();
+	} else {
+		$_SESSION['errmsg'] = "Invalid username or password";
+		$extra = "index.php";
+		$host  = $_SERVER['HTTP_HOST'];
+		$uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+		header("location:http://$host$uri/$extra");
+		exit();
+	}
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,6 +41,7 @@ exit();
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="../assets/images/favicon2.ico">
 </head>
+
 <body>
 
 	<div class="navbar navbar-fixed-top">
@@ -53,22 +51,22 @@ exit();
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="index.html">
-			  		Shopping Portal | Admin
-			  	</a>
+				<a class="brand" href="index.html">
+					Bookly Portal | Admin
+				</a>
 
 				<div class="nav-collapse collapse navbar-inverse-collapse">
-				
+
 					<ul class="nav pull-right">
 
 						<li><a href="../">
-						Back to BOOKLY
-						
-						</a></li>
+								Back to BOOKLY
 
-						
+							</a></li>
 
-						
+
+
+
 					</ul>
 				</div><!-- /.nav-collapse -->
 			</div>
@@ -85,7 +83,7 @@ exit();
 						<div class="module-head">
 							<h3>Sign In</h3>
 						</div>
-						<span style="color:red;" ><?php echo htmlentities($_SESSION['errmsg']); ?><?php echo htmlentities($_SESSION['errmsg']="");?></span>
+						<span style="color:red;"><?php echo htmlentities($_SESSION['errmsg']); ?><?php echo htmlentities($_SESSION['errmsg'] = ""); ?></span>
 						<div class="module-body">
 							<div class="control-group">
 								<div class="controls row-fluid">
@@ -94,7 +92,7 @@ exit();
 							</div>
 							<div class="control-group">
 								<div class="controls row-fluid">
-						<input class="span12" type="password" id="inputPassword" name="password" placeholder="Password">
+									<input class="span12" type="password" id="inputPassword" name="password" placeholder="Password">
 								</div>
 							</div>
 						</div>
@@ -102,7 +100,7 @@ exit();
 							<div class="control-group">
 								<div class="controls clearfix">
 									<button type="submit" class="btn btn-primary pull-right" name="submit">Login</button>
-									
+
 								</div>
 							</div>
 						</div>
@@ -110,12 +108,13 @@ exit();
 				</div>
 			</div>
 		</div>
-	</div><!--/.wrapper-->
+	</div>
+	<!--/.wrapper-->
 
 	<div class="footer">
 		<div class="container">
-			 
-		<b class="copyright">&copy; copyright @BOOKLY <?php echo date('D-M-Y'); ?> All rights reserved :: Edwin Nyongesa</b>
+
+			<b class="copyright">&copy; BOOKLY <?php echo date('D-M-Y'); ?> All rights reserved :: Edwin Nyongesa</b>
 		</div>
 	</div>
 

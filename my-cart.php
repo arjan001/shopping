@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 
 			}
 		}
-			echo "<script>alert('Your Cart hasbeen Updated');</script>";
+			echo "<script>alert('Your Cart has been Updated');</script>";
 		}
 	}
 // Code for Remove a Product from Cart
@@ -101,11 +101,7 @@ header('location:bill-ship-addresses2.php');
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="assets/images/favicon2.ico">
 
-		<!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
+
 
 	</head>
     <body class="cnt-home">

@@ -23,11 +23,12 @@ if (strlen($_SESSION['login']) == 0) {
 		$sql = mysqli_query($con, "SELECT password FROM  users where password='" . md5($_POST['cpass']) . "' && id='" . $_SESSION['id'] . "'");
 		$num = mysqli_fetch_array($sql);
 		if ($num > 0) {
-			$con = mysqli_query($con, "update students set password='" . md5($_POST['newpass']) . "', updationDate='$currentTime' where id='" . $_SESSION['id'] . "'");
-			echo "<script>alert('Password Changed Successfully !!');</script>";
+			$con = mysqli_query($con, "update users set password='" . md5($_POST['newpass']) . "', updationDate='$currentTime' where id='" . $_SESSION['id'] . "'");
+			echo "<script>alert('Password  has been Changed Successfully !!');</script>";
 		} else {
 			echo "<script>alert('Current Password not match !!');</script>";
 		}
+		
 	}
 
 ?>
@@ -167,7 +168,7 @@ if (strlen($_SESSION['login']) == 0) {
 
 															<div class="form-group">
 																<label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
-																<input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" value="<?php echo $row['email']; ?>" readonly>
+																<input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" value="<?php echo $row['email']; ?>">
 															</div>
 															<div class="form-group">
 																<label class="info-title" for="Contact No.">Contact No. <span>*</span></label>

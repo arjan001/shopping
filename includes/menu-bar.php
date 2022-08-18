@@ -18,9 +18,7 @@
 				
 			</li>
               <?php $sql=mysqli_query($con,"select id,categoryName  from category limit 6");
-while($row=mysqli_fetch_array($sql))
-{
-    ?>
+                 while($row=mysqli_fetch_array($sql)) {?>
 
 			<li class="dropdown yamm">
 				<a href="category.php?cid=<?php echo $row['id'];?>"> <?php echo $row['categoryName'];?></a>

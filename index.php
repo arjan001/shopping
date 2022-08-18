@@ -19,7 +19,6 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 	}
 }
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -93,11 +92,12 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 					<div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder">
 
 						<!-- ======================================= SECTION – HERO ========================================= -->
-                        <!-- MAIN HOMEPAGE SLIDER  ON LANDING PAGE STARTS HERE -->
+
+						<!-- MAIN HOMEPAGE SLIDER  ON LANDING PAGE STARTS HERE -->
 						<div id="hero" class="homepage-slider3">
 							<div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
 								<div class="full-width-slider">
-									<div class="item" style="background-image: url(assets/images/sliders/slider1.png);">
+									<div class="item" style="background-image: url(assets/images/sliders/slider3.png);">
 										<!-- /.container-fluid -->
 									</div><!-- /.item -->
 								</div><!-- /.full-width-slider -->
@@ -106,9 +106,18 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 									<div class="item full-width-slider" style="background-image: url(assets/images/sliders/slider2.png);">
 									</div><!-- /.item -->
 								</div><!-- /.full-width-slider -->
+								<div class="full-width-slider">
+									<div class="item full-width-slider" style="background-image: url(assets/images/sliders/slider1.png);">
+									</div><!-- /.item -->
+								</div><!-- /.full-width-slider -->
+								<div class="full-width-slider">
+									<div class="item full-width-slider" style="background-image: url(assets/images/sliders/slider4.png);">
+									</div><!-- /.item -->
+								</div><!-- /.full-width-slider -->
 							</div><!-- /.owl-carousel -->
 						</div>
 						<!-- MAIN HOMEPAGE SLIDER  ON LANDING PAGE ENDS HERE -->
+
 						<!-- ========================================= SECTION – HERO : END ========================================= -->
 
 						<!-- ============================================== INFO BOXES ============================================== -->
@@ -182,8 +191,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 						<div class="tab-pane in active" id="all">
 							<div class="product-slider">
 								<div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="5">
-									<?php
-									$ret = mysqli_query($con, "select * from products");
+									<?php $ret = mysqli_query($con, "select * from products");
 									while ($row = mysqli_fetch_array($ret)) {
 										# code...
 
@@ -211,8 +219,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 														<div class="description"></div>
 
 														<div class="product-price">
-															<span class="price">
-																Ksh.<?php echo htmlentities($row['productPrice']); ?> </span>
+															<span class="price">Ksh.<?php echo htmlentities($row['productPrice']); ?> </span>
 															<span class="price-before-discount">Ksh.<?php echo htmlentities($row['productPriceBeforeDiscount']); ?> </span>
 
 														</div><!-- /.product-price -->
@@ -283,7 +290,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 							</div><!-- /.product-slider -->
 						</div>
 
-                        <!-- COMICS BOOKS TOGGLE END HERE -->
+						<!-- COMICS BOOKS TOGGLE END HERE -->
 
 						<!-- FINANCE  BOOKS TOGGLE-->
 						<div class="tab-pane" id="finance">
@@ -333,10 +340,10 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- FINANCE BOOKS TOGGLE END HERE-->
 					</div>
- 
+
 				</div>
 
 
@@ -431,7 +438,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 														</div>
 
 													</div>
-													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary" style="background-color:#d1c028";>Add to Cart</a></div>
+													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary" style="background-color:#d1c028" ;>Add to Cart</a></div>
 												</div>
 											</div>
 										</div>
@@ -443,7 +450,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 							</section>
 
 						</div>
-						
+
 						<!-- EDUCATION GRID SECTION END HERE-->
 					</div>
 				</div>
@@ -451,7 +458,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 
 				<!-- HISTORY STARTS HERE -->
-				<section class="section featured-product inner-xs wow fadeInUp">
+				<section class="section featured-product inner-xs wow fadeInRight">
 					<h3 class="section-title">history</h3>
 					<div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
 						<?php
@@ -500,13 +507,113 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 				</section>
 				<!-- HISTORY ENDS HERE-->
 
+				<!-- ROMANCE STARTS HERE -->
+				<section class="section featured-product inner-xs wow fadeInLeft">
+					<h3 class="section-title">romance</h3>
+					<div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs" data-item="3">
+						<?php
+						$ret = mysqli_query($con, "select * from products where category=3 and subCategory=16");
+						while ($row = mysqli_fetch_array($ret)) {
+							# code...
+
+
+						?>
+							<div class="item">
+								<div class="products">
+									<div class="product">
+										<div class="product-micro">
+											<div class="row product-micro-row">
+												<div class="col col-xs-6">
+													<div class="product-image">
+														<div class="image">
+															<a href="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" data-lightbox="image-1" data-title="<?php echo htmlentities($row['productName']); ?>">
+																<img data-echo="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" width="180" height="250" alt="">
+																<div class="zoom-overlay"></div>
+															</a>
+														</div><!-- /.image -->
+
+													</div><!-- /.product-image -->
+												</div><!-- /.col -->
+												<div class="col col-xs-6">
+													<div class="product-info">
+														<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
+														<div class="rating rateit-small"></div>
+														<div class="product-price">
+															<span class="price">Ksh. <?php echo htmlentities($row['productPrice']); ?></span><br>
+
+
+														</div><!-- /.product-price --><br>
+														<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add To Cart</a></div>
+													</div>
+												</div><!-- /.col -->
+											</div><!-- /.product-micro-row -->
+										</div><!-- /.product-micro -->
+									</div>
+
+
+								</div>
+							</div><?php } ?>
+					</div>
+				</section>
+				<!-- ROMANCE ENDS HERE-->
+
+				<!-- EXTRA KIDS FAMILY SECTION START -->
+				<h3 class="section-title">FAMILY</h3>
+				<div class="product-slider">
+					<div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="5">
+						<?php
+						$ret = mysqli_query($con, "select * from products where category=7 and subCategory=27");
+						while ($row = mysqli_fetch_array($ret)) {
+							# code...
+
+
+						?>
+
+
+							<div class="item item-carousel">
+								<div class="products">
+
+									<div class="product">
+										<div class="product-image">
+											<div class="image">
+												<a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>">
+													<img src="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" data-echo="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>" width="180" height="250" alt=""></a>
+											</div><!-- /.image -->
+
+
+										</div><!-- /.product-image -->
+
+
+										<div class="product-info text-left">
+											<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
+											<div class="rating rateit-small"></div>
+											<div class="description"></div>
+
+											<div class="product-price">
+												<span class="price">Ksh.<?php echo htmlentities($row['productPrice']); ?> </span>
+												<span class="price-before-discount">Ksh.<?php echo htmlentities($row['productPriceBeforeDiscount']); ?> </span>
+
+											</div><!-- /.product-price -->
+
+										</div><!-- /.product-info -->
+										<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary" style="background-color:#">Add to Cart</a></div>
+									</div><!-- /.product -->
+
+								</div><!-- /.products -->
+							</div><!-- /.item -->
+						<?php } ?>
+
+					</div><!-- /.home-owl-carousel -->
+				</div><!-- /.product-slider -->
+				<!-- EXTRA KIDS FAMILY SECTION ENDS HERE -->
+
 
 				<?php include('includes/brands-slider.php'); ?>
 
 			</div>
 		</div>
 		<?php include('includes/footer.php'); ?>
-       <!--SCRIPTS BEGIN-->
+		<!--SCRIPTS BEGIN-->
 		<script src="assets/js/jquery-1.11.1.min.js"></script>
 
 		<script src="assets/js/bootstrap.min.js"></script>
@@ -522,28 +629,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 		<script src="assets/js/bootstrap-select.min.js"></script>
 		<script src="assets/js/wow.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
-        <!--SCRIPTS END-->
-		
-		<!-- For demo purposes – can be removed on production -->
-
-		<script src="switchstylesheet/switchstylesheet.js"></script>
-
-		<script>
-			$(document).ready(function() {
-				$(".changecolor").switchstylesheet({
-					seperator: "color"
-				});
-				$('.show-theme-options').click(function() {
-					$(this).parent().toggleClass('open');
-					return false;
-				});
-			});
-
-			$(window).bind("load", function() {
-				$('.show-theme-options').delay(2000).trigger('click');
-			});
-		</script>
-		<!-- For demo purposes – can be removed on production : End -->
+		<!--SCRIPTS END-->
 
 
 

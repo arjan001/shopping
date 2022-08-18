@@ -19,7 +19,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 		}
 	}
 }
-// COde for Wishlist
+// codes za  Wishlist
 if(isset($_GET['pid']) && $_GET['action']=="wishlist" ){
 	if(strlen($_SESSION['login'])==0)
     {   
@@ -113,10 +113,7 @@ header('location:my-wishlist.php');
         <ul class="nav">
             <li class="dropdown menu-item">
               <?php $sql=mysqli_query($con,"select id,subcategory  from subcategory");
-
-while($row=mysqli_fetch_array($sql))
-{
-    ?>
+              while($row=mysqli_fetch_array($sql)) { ?>
                 <a href="sub-category.php?scid=<?php echo $row['id'];?>" class="dropdown-toggle"><i class="icon fa fa-desktop fa-fw"></i>
                 <?php echo $row['subcategory'];?></a>
                 <?php }?>
@@ -126,7 +123,8 @@ while($row=mysqli_fetch_array($sql))
     </nav>
 </div>
 </div><!-- /.side-menu -->
-<!-- ================================== TOP NAVIGATION : END ================================== -->	            <div class="sidebar-module-container">
+<!-- ================================== TOP NAVIGATION : END ================================== -->
+        <div class="sidebar-module-container">
 	            	<h3 class="section-title">shop by</h3>
 	            	<div class="sidebar-filter">
 <!-- ============================================== SIDEBAR CATEGORY ============================================== -->

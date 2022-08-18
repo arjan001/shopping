@@ -228,7 +228,7 @@ while ($row=mysqli_fetch_array($ret))
 		</div>
 	  <?php } } else {?>
 	
-		<div class="col-sm-6 col-md-4 wow fadeInUp"> <h3>No Product Found try again later</h3>
+		<div class="col-sm-6 col-md-4 wow fadeInUp"> <h3>No Product Found</h3>
 		</div>
 		
 <?php } ?>	
