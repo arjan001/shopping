@@ -3184,6 +3184,37 @@ a {
 }
 
 /* FEATURED HISTORY BOOKS ENDS HERE */
+/* advert banner on homepage */
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/img/library.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  align-items: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.banner .content span {
+  font-size: 2rem;
+  color: #29d9d5;
+}
+
+.banner .content h3 {
+  font-size: 4rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.banner .content p {
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  line-height: 2;
+}
+
+/* advert banner on homepage */
 
 /* TRENDING ITEMS WRAPPER ON PRODUCT DETAILS.PHP  PAGE*/
 .hot-deals .hot-deal-wrapper {

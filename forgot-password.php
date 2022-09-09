@@ -66,14 +66,6 @@ if (isset($_POST['change'])) {
 	<!-- Demo Purpose Only. Should be removed in production -->
 	<link rel="stylesheet" href="assets/css/config.css">
 
-	<link href="assets/css/green.css" rel="alternate stylesheet" title="Green color">
-	<link href="assets/css/blue.css" rel="alternate stylesheet" title="Blue color">
-	<link href="assets/css/red.css" rel="alternate stylesheet" title="Red color">
-	<link href="assets/css/orange.css" rel="alternate stylesheet" title="Orange color">
-	<link href="assets/css/dark-green.css" rel="alternate stylesheet" title="Darkgreen color">
-	<!-- Demo Purpose Only. Should be removed in production : END -->
-
-
 	<!-- Icons/Glyphs -->
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
@@ -116,7 +108,7 @@ if (isset($_POST['change'])) {
 		<div class="container">
 			<div class="breadcrumb-inner">
 				<ul class="list-inline list-unstyled">
-					<li><a href="home.html">Home</a></li>
+					<li><a href="insex.php">Home</a></li>
 					<li class='active'>Forgot Password</li>
 				</ul>
 			</div><!-- /.breadcrumb-inner -->
